@@ -1,0 +1,13 @@
+{
+    "editor.fontFamily": "'Fira Code'",
+    "window.menuBarVisibility": "default",
+    "workbench.sideBar.location": "right",
+    "workbench.iconTheme": "material-icon-theme",
+    "files.autoSave": "afterDelay",
+    "editor.renderWhitespace": "boundary",
+    "editor.mouseWheelZoom": true,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.semanticHighlighting.enabled": true,
+    "window.zoomLevel": 0
+}
