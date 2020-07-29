@@ -1,0 +1,6 @@
+configuration {
+    modi: "window,run";
+    font: "Fira Code 13";
+    show-icons: true;
+    matching: "fuzzy";
+}
