@@ -17,6 +17,8 @@ set softtabstop=2
 set expandtab
 set noshiftround
 
+" for no cursor change after exiting vim
+set guicursor=
 
 set listchars=tab:▸\ ,eol:¬
 
