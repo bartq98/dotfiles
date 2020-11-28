@@ -116,8 +116,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Own Aliases:
 alias cl='clear'
-alias l='exa -l'
-alias la='exa -la'
+alias l='exa -l --group-directories-first --git'
+alias la='exa -la --group-directories-first --git'
 alias lt='exa --tree'
 alias v="nvim"
 alias pogoda='curl wttr.in/Kraków'
