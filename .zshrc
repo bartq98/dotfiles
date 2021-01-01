@@ -58,7 +58,7 @@ setopt HIST_IGNORE_SPACE # commands started with space will be ignored in histor
 alias cl='clear'
 alias updt='sudo pacman -Syu'
 function cht { curl cht.sh/$1 } # cheat.sh is handy man replacement
-function kn { konsole . 2>dev/null &! } # open new terminal with current path
+function kn { konsole . 2>/dev/null &! } # open new terminal with current path
 function spaces { for file in *; do mv "$file" `echo $file | tr ' ' '_'` ; done } # space to underscore in filename for every file/dir in pwd
 function x { xdg-open 2>/dev/null &! } # file open with xdg-open default application
 
