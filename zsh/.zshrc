@@ -26,10 +26,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 
 plugins=(
-	git
 	fzf
+	git
 	z
 	zsh-autosuggestions
+  zsh-completions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -51,20 +52,26 @@ export VISUAL='nvim'
 
 setopt HIST_IGNORE_SPACE # commands started with space will be ignored in history
 
-# Own Aliases:
+# - - - - - Own Aliases - - - - -
+
+# OS management 
 alias cl='clear'
-alias l='exa -l --group-directories-first --git'
-alias la='exa -la --group-directories-first --git'
-alias lt='exa --tree'
-alias v="nvim"
-alias pogoda='curl wttr.in/Kraków'
-
-function pdfd { xpdf -rv $1 &! } # open dark version 
-function pdf { xpdf $1 &! }
+alias updt='sudo pacman -Syu'
+function cht { curl cht.sh/$1 } # cheat.sh is handy man replacement
+function kn { konsole . 2>dev/null &! } # open new terminal with current path
+function spaces { for file in *; do mv "$file" `echo $file | tr ' ' '_'` ; done } # space to underscore in filename for every file/dir in pwd
 function x { xdg-open 2>/dev/null &! } # file open with xdg-open default application
-function chs { curl cht.sh/$1 } # cheat.sh is handy man replacement
 
-function spaces { for file in *; do mv "$file" `echo $file | tr ' ' '_'` ; done } # changes spaces to underscore for any files in current directory
+# ls replacement
+alias l='exa -l --group-directories-first --git --grid'
+alias la='exa -la --group-directories-first --git --grid'
+alias lt='exa --tree'
+
+# editing
+alias v="nvim"
+
+# misc.
+function wttr { curl v2.wttr.in/$1 }
 alias youtube-dl="youtube-dl -f bestvideo+bestaudio/best" # best possible quality
 
 # github.com/phiresky/ripgrep-all - ripgrep-all with fzf
