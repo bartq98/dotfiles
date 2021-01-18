@@ -30,7 +30,7 @@ plugins=(
 	git
 	z
 	zsh-autosuggestions
-  zsh-completions
+	zsh-completions
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -56,11 +56,11 @@ setopt HIST_IGNORE_SPACE # commands started with space will be ignored in histor
 
 # OS management 
 alias cl='clear'
-alias updt='sudo pacman -Syu'
+alias updt='sudo pacman -Syu' # pacman is Arch Linux PACkage MANager
 function cht { curl cht.sh/$1 } # cheat.sh is handy man replacement
 function kn { konsole . 2>/dev/null &! } # open new terminal with current path
 function spaces { for file in *; do mv "$file" `echo $file | tr ' ' '_'` ; done } # space to underscore in filename for every file/dir in pwd
-function x { xdg-open 2>/dev/null &! } # file open with xdg-open default application
+function x { xdg-open $1 2>/dev/null &! } # file open with xdg-open default application
 
 # ls replacement
 alias l='exa -l --group-directories-first --git --grid'
