@@ -5,11 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
-export ZSH="/home/bartq/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -18,26 +15,18 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Add wisely, as too many plugins slow down shell startup.
 
 plugins=(
-	fzf
-	git
-	z
-	zsh-autosuggestions
-	zsh-completions
+  fzf
+  git
+  z
+  zsh-autosuggestions
+  zsh-completions
 )
 
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
-
-# export MANPATH="/usr/local/man:$MANPATH"
 
 export EDIOTR='nvim'
 export VISUAL='nvim'
@@ -52,15 +41,16 @@ export VISUAL='nvim'
 
 setopt HIST_IGNORE_SPACE # commands started with space will be ignored in history
 
-# - - - - - Own Aliases - - - - -
+# -#-#-#-#-#- personal aliases, functions etc. -#-#-#-#-#-
 
 # OS management 
 alias cl='clear'
-alias updt='sudo pacman -Syu' # pacman is Arch Linux PACkage MANager
+alias updt='sudo pacman -Syu' # Arch Linux: updates and may install package
+
+function x { xdg-open $1 2>/dev/null &! } # opens file with default xdg application
 function cht { curl cht.sh/$1 } # cheat.sh is handy man replacement
 function kn { konsole . 2>/dev/null &! } # open new terminal with current path
-function spaces { for file in *; do mv "$file" `echo $file | tr ' ' '_'` ; done } # space to underscore in filename for every file/dir in pwd
-function x { xdg-open $1 2>/dev/null &! } # file open with xdg-open default application
+function spaces { for file in *; do mv "$file" `echo $file | tr ' ' '_'` ; done } # space to underscore in filename for every file
 
 # ls replacement
 alias l='exa -l --group-directories-first --git --grid'
@@ -68,23 +58,12 @@ alias la='exa -la --group-directories-first --git --grid'
 alias lt='exa --tree'
 
 # editing
+alias -s csv=code
+alias -s md=code
+alias -s txt=nvim
+alias -s {html,css,js}=code
 alias v="nvim"
 
 # misc.
 function wttr { curl v2.wttr.in/$1 }
 alias youtube-dl="youtube-dl -f bestvideo+bestaudio/best" # best possible quality
-
-# github.com/phiresky/ripgrep-all - ripgrep-all with fzf
-rga-fzf() {
-  RG_PREFIX="rga --files-with-matches"
-  local file
-  file="$(
-    FZF_DEFAULT_COMMAND="$RG_PREFIX '$1'" \
-      fzf --sort --preview="[[ ! -z {} ]] && rga --pretty --context 5 {q} {}" \
-        --phony -q "$1" \
-        --bind "change:reload:$RG_PREFIX {q}" \
-        --preview-window="70%:wrap"
-  )" &&
-  echo "opening $file" &&
-  xdg-open "$file"   
-}
