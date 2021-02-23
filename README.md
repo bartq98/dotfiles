@@ -13,7 +13,7 @@ ___
 If you often install your favourite OS and want to quickly install your toolset the best way is list every package in text file and do this:
 
 ```bash
-sudo pacman -Syu - < myPackageList.txt
+sudo pacman -Syu - < packageList.txt
 ```
 
 ## shell useful shortcuts
