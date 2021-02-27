@@ -66,4 +66,4 @@ alias v="nvim"
 
 # misc.
 function wttr { curl v2.wttr.in/$1 }
-alias youtube-dl="youtube-dl -f bestvideo+bestaudio/best" # best possible quality
+alias yt="youtube-dl -f bestvideo+bestaudio/best" # best possible quality
