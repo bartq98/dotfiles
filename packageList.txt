@@ -9,10 +9,11 @@ firefox-developer-edition
 flameshot
 fzf
 htop
+kid3
 kolourpaint
 kompare
 krita
-libre-office-fresh
+libreoffice-fresh
 neovim
 ripgrep
 speedcrunch
