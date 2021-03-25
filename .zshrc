@@ -67,3 +67,10 @@ alias v="nvim"
 # misc.
 function wttr { curl v2.wttr.in/$1 }
 alias yt="youtube-dl -f bestvideo+bestaudio/best" # best possible quality
+
+# triming video:
+# trim from $1 (HH:MM:SS) to $3 (HH:MM:SS)
+# input file $2 to output file $4 (name of output must have proper extension)
+function trimvid {
+  ffmpeg -ss $1 -i $2 -to $3 -c copy $4
+}
