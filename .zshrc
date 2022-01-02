@@ -45,7 +45,7 @@ setopt HIST_IGNORE_SPACE # commands started with space will be ignored in histor
 
 # OS management 
 alias cl='clear'
-alias updt='sudo pacman -Syu' # Arch Linux: updates and may install package
+alias updt='sudo pacman -Syyu' # Arch Linux: updates and may install package
 
 function x { xdg-open $1 2>/dev/null &! } # opens file with default xdg application
 function cht { curl cht.sh/$1 } # cheat.sh is handy man replacement
