@@ -16,6 +16,9 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 set noshiftround
+set hlsearch
+set incsearch
+set ignorecase
 
 " for no cursor change after exiting vim
 set guicursor=
@@ -28,4 +31,4 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-surround'
 call plug#end()
 
-
+let g:airline_powerline_fonts=1
