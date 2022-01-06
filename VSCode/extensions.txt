@@ -1,0 +1,16 @@
+bladnman.auto-align
+christian-kohler.path-intellisense
+James-Yu.latex-workshop
+mathiasfrohlich.Kotlin
+ms-python.python
+ms-python.vscode-pylance
+ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
+njpwerner.autodocstring
+PKief.material-icon-theme
+VisualStudioExptTeam.vscodeintellicode
+wayou.vscode-todo-highlight
+wwm.better-align
+yzane.markdown-pdf
+yzhang.markdown-all-in-one
