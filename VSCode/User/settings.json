@@ -1,13 +1,138 @@
 {
-    "editor.fontFamily": "'Fira Code'",
-    "window.menuBarVisibility": "default",
-    "workbench.sideBar.location": "right",
-    "workbench.iconTheme": "material-icon-theme",
-    "files.autoSave": "afterDelay",
-    "editor.renderWhitespace": "boundary",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.fontFamily": "Jetbrains Mono",
     "editor.mouseWheelZoom": true,
+    "editor.renderWhitespace": "boundary",
     "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "java.semanticHighlighting.enabled": true,
-    "window.zoomLevel": 0
+    "files.autoSave": "afterDelay",
+    "markdown-pdf.displayHeaderFooter": false,
+    "markdown-pdf.emoji": false,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.fontFamily": "JetbrainsMono Nerd Font Mono",
+    "terminal.integrated.fontSize": 16,
+    "window.zoomLevel": 0,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.sideBar.location": "right",
+    "todohighlight.keywords": [
+        {
+            "text": "NOTE:",
+            "color": "#1bb58f",
+            "backgroundColor": "#054a39",
+            "border": "2px solid #1bb58f",
+            "borderRadius": "4px",
+            "overviewRulerColor": "grey"
+        },
+        {
+            "text": "TOCHANGE:",
+            "color": "#1b7db5",
+            "backgroundColor": "#091a6e",
+            "border": "2px solid #1b7db5",
+            "borderRadius": "4px",
+            "overviewRulerColor": "grey"
+        },
+        {
+            "text": "TODO:",
+            "color": "red",
+            "border": "2px solid red",
+            "borderRadius": "4px",
+            "backgroundColor": "#5c0c0c",
+        }
+    ],
+    "latex-workshop.message.badbox.show": false,
+    "latex-workshop.view.pdf.viewer": "browser",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "--shell-escape",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "lualatexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-lualatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk_rconly",
+            "command": "latexmk",
+            "args": [
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "rnw2tex",
+            "command": "Rscript",
+            "args": [
+                "-e",
+                "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+            ],
+            "env": {}
+        },
+        {
+            "name": "jnw2tex",
+            "command": "julia",
+            "args": [
+                "-e",
+                "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
+            ],
+            "env": {}
+        },
+        {
+            "name": "jnw2texmintex",
+            "command": "julia",
+            "args": [
+                "-e",
+                "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+            ],
+            "env": {}
+        },
+        {
+            "name": "tectonic",
+            "command": "tectonic",
+            "args": [
+                "--synctex",
+                "--keep-logs",
+                "%DOC%.tex"
+            ],
+            "env": {}
+        }
+    ],
+    "telemetry.telemetryLevel": "off",
 }
