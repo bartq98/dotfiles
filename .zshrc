@@ -22,8 +22,9 @@ plugins=(
   fzf
   git
   z
-  zsh-autosuggestions
-  zsh-completions
+  zsh-autosuggestions     # https://github.com/zsh-users/zsh-autosuggestions
+  zsh-completions         # https://github.com/zsh-users/zsh-completions
+  zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -43,30 +44,35 @@ setopt HIST_IGNORE_SPACE # commands started with space will be ignored in histor
 
 # -#-#-#-#-#- personal aliases, functions etc. -#-#-#-#-#-
 
-# OS management 
+# OS management
 alias cl='clear'
-alias updt='sudo pacman -Syyu' # Arch Linux: updates and may install package
+alias updt='sudo pacman -Syyu' # Arch Linux: upgrade and optionally install package(s)
 
 function x { xdg-open $1 2>/dev/null &! } # opens file with default xdg application
 function cht { curl cht.sh/$1 } # cheat.sh is handy man replacement
 function kn { konsole . 2>/dev/null &! } # open new terminal with current path
 function spaces { for file in *; do mv "$file" `echo $file | tr ' ' '_'` ; done } # space to underscore in filename for every file
+alias count='find . -type f | wc -l'
 
 # ls replacement
 alias l='exa -l --group-directories-first --git --grid'
 alias la='exa -la --group-directories-first --git --grid'
 alias lt='exa --tree'
 
+function cd {
+  builtin cd "$@" && l
+}
+
 # editing
 alias -s csv=code
 alias -s md=code
 alias -s txt=nvim
-alias -s {html,css,js}=code
+alias -s {html,css,js,jsx,ts}=code
 alias v="nvim"
 
 # misc.
 function wttr { curl v2.wttr.in/$1 }
-alias yt="youtube-dl -f bestvideo+bestaudio/best" # best possible quality
+alias yt=yt-dlp
 
 # triming video:
 # trim from $1 (HH:MM:SS) to $3 (HH:MM:SS)
