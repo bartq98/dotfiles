@@ -17,9 +17,11 @@ libreoffice-fresh
 neovim
 ripgrep
 speedcrunch
+texlive-most
+tldr
 ttf-fira-code
 ttf-jetbrains-mono
 ttf-roboto
 vlc
-youtube-dl
+yt-dlp
 zsh
