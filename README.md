@@ -6,9 +6,7 @@ I use **Arch Linux** and **Windows 10** to get work done.
 
 ___
 
-## **Arch Linux**
-
-### Installing packages from list
+### **Installing packages from list**
 
 If you often install your favourite OS and want to quickly install your toolset the best way is list every package in text file and do this:
 
@@ -16,7 +14,7 @@ If you often install your favourite OS and want to quickly install your toolset 
 sudo pacman -Syyu - < packageList.txt
 ```
 
-## shell useful shortcuts
+### **shell useful shortcuts**
 
 The best source to explore shell magic is [**commandlinefu**](https://www.commandlinefu.com/commands/browse/sort-by-votes).
 

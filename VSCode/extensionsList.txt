@@ -1,3 +1,4 @@
+bierner.markdown-preview-github-styles
 christian-kohler.path-intellisense
 dsznajder.es7-react-js-snippets
 ecmel.vscode-html-css
