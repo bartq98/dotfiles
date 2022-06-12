@@ -1,5 +1,6 @@
 bierner.markdown-preview-github-styles
 christian-kohler.path-intellisense
+dbaeumer.vscode-eslint
 dsznajder.es7-react-js-snippets
 ecmel.vscode-html-css
 GitHub.github-vscode-theme
@@ -15,6 +16,7 @@ njpwerner.autodocstring
 oderwat.indent-rainbow
 PKief.material-icon-theme
 tomoki1207.pdf
+valentjn.vscode-ltex
 wayou.vscode-todo-highlight
 yzane.markdown-pdf
 yzhang.markdown-all-in-one
