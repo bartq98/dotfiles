@@ -4,9 +4,10 @@ diff-so-fancy
 discord
 elisa
 exa
+exfat-utils
+exfatprogs
 firefox
 firefox-developer-edition
-flameshot
 fzf
 htop
 kid3
