@@ -27,6 +27,7 @@ plugins=(
   zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting
 )
 
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 
 export EDIOTR='nvim'
