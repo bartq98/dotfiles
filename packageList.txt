@@ -17,6 +17,7 @@ krita
 libreoffice-fresh
 neovim
 ripgrep
+rsync
 speedcrunch
 texlive-most
 tldr
