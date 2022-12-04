@@ -1,3 +1,4 @@
+android-tools
 chromium
 code
 diff-so-fancy
@@ -10,13 +11,16 @@ firefox
 firefox-developer-edition
 fzf
 htop
+ipython
 kid3
 kolourpaint
 kompare
 krita
 libreoffice-fresh
+mtr
 neovim
 ripgrep
+rsync
 rsync
 speedcrunch
 texlive-most
@@ -24,6 +28,7 @@ tldr
 ttf-fira-code
 ttf-jetbrains-mono
 ttf-roboto
+unzip
 vlc
 yt-dlp
 zsh
