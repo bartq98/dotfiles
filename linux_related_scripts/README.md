@@ -5,7 +5,7 @@ ___
 
 ### **Making bootable Windows 10 drive from Linux OS**
 
-The simples (and working!) way to do it is to use [WoeUSB](https://github.com/WoeUSB/WoeUSB).
+The simplest and working way to make bootable drive with Windows image is [WoeUSB](https://github.com/WoeUSB/WoeUSB).
 
 <!-- ___
 
