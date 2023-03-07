@@ -1,7 +1,8 @@
 android-tools
 chromium
-code
 discord
+docker
+docker-compose
 elisa
 exa
 exfat-utils
@@ -20,7 +21,6 @@ libreoffice-fresh
 mtr
 neovim
 ripgrep
-rsync
 rsync
 speedcrunch
 texlive-most
