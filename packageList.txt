@@ -1,7 +1,6 @@
 android-tools
 chromium
 code
-diff-so-fancy
 discord
 elisa
 exa
@@ -10,6 +9,7 @@ exfatprogs
 firefox
 firefox-developer-edition
 fzf
+git-delta
 htop
 ipython
 kid3
