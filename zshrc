@@ -62,6 +62,8 @@ alias l='exa -l --group-directories-first --git --grid'
 alias la='exa -la --group-directories-first --git --grid'
 alias lt='exa --tree'
 
+function fd { find ./ -iname "*$1*" }
+
 function cd {
   builtin cd "$@" && l
 }
