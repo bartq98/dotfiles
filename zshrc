@@ -25,6 +25,8 @@ plugins=(
   zsh-autosuggestions     # https://github.com/zsh-users/zsh-autosuggestions
   zsh-completions         # https://github.com/zsh-users/zsh-completions
   zsh-syntax-highlighting # https://github.com/zsh-users/zsh-syntax-highlighting
+  docker
+  docker-compose
 )
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
