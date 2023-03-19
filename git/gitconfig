@@ -1,25 +1,45 @@
 # User interface
 [core]
   pager = delta
+
 [interactive]
   diffFilter = delta --color-only
+
 [delta]
   navigate = true
   light = false
   side-by-side = true
   line-numbers = true
+
 [merge]
   conflictstyle = diff3
+
 [diff]
   colorMoved = default
+
+# Aliases
+[alias]
+  # Amend the currently staged files to the latest commit.
+  amend = commit --amend --reuse-message=HEAD
+
+  # Undone git amend
+  unamend = reset --soft HEAD@{1}
+
+  # Interactive rebase with the given number of latest commits.
+  reb = "!r() { git rebase -i HEAD~$1; }; r"
+
+  # Simple archivize repo. within last commit as .zip
+  ark = { archive --format=zip HEAD --output=$1 }
 
 # Credentials
 [user]
   email = bartusiekkrosno@poczta.fm
   name = bartq98
+
 [credential "https://github.com"]
   helper = 
   helper = !/usr/bin/gh auth git-credential
+
 [credential "https://gist.github.com"]
   helper = 
   helper = !/usr/bin/gh auth git-credential
