@@ -1,0 +1,1 @@
+Default `init.vim` paths is `$HOME/.config/nvim/`
