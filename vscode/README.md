@@ -1,6 +1,10 @@
-<h2 align="center">Visual Studio Code</h2>
+<h3 align="center">Visual Studio Code</h3>
 
----
+Table of Contents:
+- [**Initial setup**](#initial-setup)
+- [**Code-OSS - Microsoft Marketplace as deafult extension gallery**](#code-oss---microsoft-marketplace-as-deafult-extension-gallery)
+
+<br>
 
 ### **Initial setup**
 
@@ -13,14 +17,13 @@ To install all of extensions mentioned in `extensions.txt` run this command:
 cat extensionsList.txt | xargs -L1 code --install-extension
 ```
 
----
 
 ### **Code-OSS - Microsoft Marketplace as deafult extension gallery**
 
-I use Code provided with snap package which has official, biggest extension store.
+I use official Visual Studio Code provided with snap package which has official, biggest extension store.
 It can be installed via snap (more there: https://snapcraft.io/code).
 
-Previously I've been using a Code - OSS - the default FOSS version of VSCode. This version's default extenstion gallery was not Microsoft's Marketplace.
+Previously I've been using a [Code - OSS](https://github.com/microsoft/vscode) - the default FOSS version of VSCode. As for Arch Linux it can be installed with [this](https://archlinux.org/packages/community/x86_64/code/) package. This version's default extenstion gallery **was not** Microsoft Marketplace.
 
 To change it you can install [this](https://aur.archlinux.org/packages/code-marketplace/) or change it manually (solution below): 
 
