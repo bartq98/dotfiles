@@ -1,0 +1,59 @@
+[$Version]
+update_info=dolphin_detailsmodesettings.upd:rename-leading-padding
+
+[ContextMenu]
+ShowCopyMoveMenu=true
+
+[DetailsMode]
+DirectorySizeCount=false
+PreviewSize=256
+RecursiveDirectorySizeLimit=20
+ViewFont=Roboto,10,-1,5,50,0,0,0,0,0
+
+[General]
+GlobalViewProps=false
+OpenExternallyCalledFolderInNewTab=false
+RememberOpenedTabs=false
+SortingChoice=CaseInsensitiveSorting
+Version=202
+ViewPropsTimestamp=2022,9,25,21,3,1.8719999999999999
+
+[IconsMode]
+IconSize=22
+PreviewSize=256
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+detailViewIconSize=16
+
+[KPropertiesDialog]
+2 screens: Height=702
+2 screens: Width=554
+HDMI-0 DP-4 Height 1920x1080=732
+HDMI-0 DP-4 Height 1920x1080 DP-4=668
+HDMI-0 DP-4 Height 2560x1080=526
+HDMI-0 DP-4 Height 2560x1080 HDMI-0=526
+HDMI-0 DP-4 Height 3440x1440 HDMI-0=668
+HDMI-0 DP-4 Width 1920x1080=556
+HDMI-0 DP-4 Width 1920x1080 DP-4=569
+HDMI-0 DP-4 Width 2560x1080=504
+HDMI-0 DP-4 Width 2560x1080 HDMI-0=497
+HDMI-0 DP-4 Width 3440x1440 HDMI-0=554
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[Open-with settings]
+CompletionMode=1
+History=kate
+
+[PreviewSettings]
+Plugins=audiothumbnail,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,marble_thumbnail_shp,exrthumbnail,directorythumbnail,fontthumbnail,marble_thumbnail_geojson,pothumbnail,marble_thumbnail_gpx,imagethumbnail,jpegthumbnail,marble_thumbnail_kmz,marble_thumbnail_kml,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mltpreview,mobithumbnail,opendocumentthumbnail,marble_thumbnail_osm,palathumbcreator,gsthumbnail,quithumbnail,rawthumbnail,svgthumbnail,itinerarythumbnail,ffmpegthumbs,webarchivethumbnail
+
+[kuick-copy]
+Paths[$e]=$HOME/Pictures/,$HOME/tmp/,$HOME/Desktop/
+
+[kuick-move]
+Paths[$e]=$HOME/Pictures/,$HOME/Desktop/
