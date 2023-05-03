@@ -32,3 +32,7 @@ Plug 'tpope/vim-surround'
 call plug#end()
 
 let g:airline_powerline_fonts=1
+
+" Make `coc` choose completion by pressing `enter`
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+    \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
