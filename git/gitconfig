@@ -28,8 +28,11 @@
   # Interactive rebase with the given number of latest commits.
   reb = "!r() { git rebase -i HEAD~$1; }; r"
 
-  # Returns main-branch name
+  # Returns main (default) branch name
   main-branch = !"git symbolic-ref refs/remotes/origin/HEAD | sed 's@^refs/remotes/origin/@@' "
+
+  # Returns current branch name
+  current-branch = !"git branch | grep --regexp '*.*' | sed 's/* //g'"
 
   # Simple archivize repo. within last commit as .zip
   ark = { archive --format=zip HEAD --output=$1 }
