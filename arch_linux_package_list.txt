@@ -7,6 +7,7 @@ elisa
 exa
 exfat-utils
 exfatprogs
+fd
 firefox
 firefox-developer-edition
 fzf
