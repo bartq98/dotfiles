@@ -37,6 +37,10 @@
   # Simple archivize repo. within last commit as .zip
   ark = { archive --format=zip HEAD --output=$1 }
 
+  # Allows to manually merge master - to keep local changes run `git restore --staged` (or grst oh-my-zsh alias) with path for desired files
+  # then run `git commit`
+  merge-master = !"git checkout $(git main-branch) && git pull origin/$(git main-branch) && git checkout - && git merge $(git main-branch) --no-commit --fast-forward"
+
 # Credentials
 [user]
   email = bartusiekkrosno@poczta.fm
