@@ -1,0 +1,1 @@
+Copy `plasma-i3.desktop` to `/usr/share/xssesions/plasma-i3.desktop`.
