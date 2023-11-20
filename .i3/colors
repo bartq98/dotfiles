@@ -1,0 +1,30 @@
+# Normals
+set $black   #000000
+set $red     #AA0000
+set $green   #5A9A00
+set $yellow  #A68904
+set $blue    #185AD6
+set $magenta #9010CC
+set $cyan    #107371
+set $white   #FFFFFF
+
+# Dark
+set $dark_orange #A84420
+
+# Bright
+set $bright_black   #033333
+set $bright_red     #DD0000
+set $bright_green   #79CF00
+set $bright_yellow  #E6A909
+set $bright_blue    #387AE6
+set $bright_magenta #B319FF
+set $bright_cyan    #29C5C5
+set $bright_white   #D0D0D0
+
+# class                     border            background      text      indicator       child border
+client.focused              $bright_yellow    $dark_orange    $black    $yellow         $bright_yellow
+client.focused_inactive     $bright_black     $dark_orange    $black    $dark_orange    $dark_orange
+client.unfocused            $dark_orange      $black          $white    $dark_orange    $dark_orange
+client.urgent               $dark_orange      $red            $white    $dark_orange    $dark_orange
+client.placeholder          $dark_orange      $black          $white    $dark_orange    $dark_orange
+client.focused_tab_title    $dark_orange      $red            $white    $yellow         $dark_orange
