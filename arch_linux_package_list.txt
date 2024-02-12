@@ -26,6 +26,7 @@ krita
 libreoffice-fresh
 mtr
 neovim
+qt5-imageformats
 ripgrep
 rsync
 speedcrunch
