@@ -3,6 +3,9 @@
   pager = delta
   quotepath = false
 
+[commit]
+  template = ~/.gitmessage
+
 [interactive]
   diffFilter = delta --color-only
 
