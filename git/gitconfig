@@ -15,13 +15,28 @@
   side-by-side = true
   line-numbers = true
 
+[pull]
+  default = current
+
+[push]
+  default = current
+
 [merge]
-  conflictstyle = diff3
+  conflictstyle = zdiff3
+
+[rebase]
+  autostash = true
 
 [diff]
   colorMoved = default
+  algorithm = histogram
 
-# Aliases
+[log]
+  date = iso
+
+[branch]
+  sort = committerdate
+
 [alias]
   # Amend the currently staged files to the latest commit.
   amend = commit --amend --reuse-message=HEAD
