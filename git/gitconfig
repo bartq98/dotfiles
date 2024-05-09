@@ -60,6 +60,9 @@
   # then run `git commit`
   merge-master = !"git checkout $(git main-branch) && git pull origin/$(git main-branch) && git checkout - && git merge $(git main-branch) --no-commit --fast-forward"
 
+  # undo the commit, leaving everything else intact
+  uncommit = reset --soft HEAD^
+
 # Credentials
 [user]
   email = bartusiekkrosno@poczta.fm
