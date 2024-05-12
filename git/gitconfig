@@ -17,6 +17,8 @@
 
 [pull]
   default = current
+  rebase = true
+  strategy = interactive
 
 [push]
   default = current
