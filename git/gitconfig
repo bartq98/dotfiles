@@ -55,8 +55,8 @@
   # Returns current branch name
   current-branch = !"git branch | grep --regexp '*.*' | sed 's/* //g'"
 
-  # Simple archivize repo. within last commit as .zip
-  ark = { archive --format=zip HEAD --output=$1 }
+  # Archivize repo. to <repo_name>.zip, without `.git` directory
+  ark = !"git archive --format=zip HEAD --output=$(basename $(git rev-parse --show-toplevel)).zip"
 
   # Allows to manually merge master - to keep local changes run `git restore --staged` (or grst oh-my-zsh alias) with path for desired files
   # then run `git commit`
