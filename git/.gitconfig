@@ -66,14 +66,14 @@
   uncommit = reset --soft HEAD^
 
 # Credentials
-[user]
-  email = bartusiekkrosno@poczta.fm
-  name = bartq98
+; [user]
+;   email = bartusiekkrosno@poczta.fm
+;   name = bartq98
 
-[credential "https://github.com"]
-  helper = 
-  helper = !/usr/bin/gh auth git-credential
+; [credential "https://github.com"]
+;   helper = 
+;   helper = !/usr/bin/gh auth git-credential
 
-[credential "https://gist.github.com"]
-  helper = 
-  helper = !/usr/bin/gh auth git-credential
+; [credential "https://gist.github.com"]
+;   helper = 
+;   helper = !/usr/bin/gh auth git-credential
