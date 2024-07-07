@@ -1,0 +1,1 @@
+For all apllications that I no longer use, but want to keep configuration files.
