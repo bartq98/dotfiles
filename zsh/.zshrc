@@ -22,6 +22,7 @@ plugins=(
   docker-compose
   fzf
   git
+  git-extras
   z
 
   # Custom:
@@ -34,7 +35,9 @@ plugins=(
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # ----------------------------------------------------- GLOBAL VARs. --------------------------------------------------
+
 source $ZSH/oh-my-zsh.sh
+
 export EDIOTR='nvim'
 export VISUAL='nvim'
 
@@ -44,33 +47,4 @@ setopt HIST_IGNORE_SPACE # commands started with space will be ignored in histor
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # ------------------------------------------------------ ALIASES ------------------------------------------------------
-
-# package management:
-alias updt='sudo pacman -Syyu' # Arch Linux: upgrade and optionally install package(s)
-
-# terminal-related:
-alias cl='clear'
-function x { xdg-open $1 2>/dev/null &! } # opens file with default xdg application
-function kn { konsole . 2>/dev/null &! }  # open new terminal with current path
-function cht { curl cht.sh/$1 }           # cheat.sh handy man replacement
-function fd { find ./ -iname "*$1*" }     # handy find alias
-function cd { builtin cd "$@" && l }      # prints content of recently opened directory
-
-# ls (exa):
-alias l='exa -l --group-directories-first --git --grid'
-alias la='exa -la --group-directories-first --git --grid'
-alias lt='exa --tree'
-
-# file editing:
-alias -s csv=code
-alias -s md=code
-alias -s txt=nvim
-alias -s {html,css,js,jsx,ts}=code
-alias v="nvim"
-alias diff=delta # https://github.com/dandavison/delta/blob/master/etc/completion/completion.zsh
-
-# third-party/rest:
-alias yt=yt-dlp
-function wttr { curl v2.wttr.in/$1 }                       # checks weather of desired location
-function trimvid { ffmpeg -ss $1 -i $2 -to $3 -c copy $4 } # trim from $1 (HH:MM:SS) to $3 (HH:MM:SS); input file $2 to output file $4 (name of output must have proper extension)
-function spaces { for file in *; do mv "$file" `echo $file | tr ' ' '_'` ; done } # space to underscore in filename for every file
+source ~/.aliases.zsh
