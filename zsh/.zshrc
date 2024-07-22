@@ -23,6 +23,7 @@ plugins=(
   fzf
   git
   git-extras
+  rsync
   z
 
   # Custom:
