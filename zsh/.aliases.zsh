@@ -6,7 +6,6 @@ alias l='eza -l --group-directories-first --grid --git'
 alias la='eza -la --group-directories-first --grid --git'
 alias lt='eza --tree'
 
-
 function spaces { for file in *; do mv "$file" `echo $file | tr ' ' '_'` ; done } # space to underscore in filename for every file
 
 # xdg-open related
@@ -48,3 +47,9 @@ function trimvid { ffmpeg -ss $1 -i $2 -to $3 -c copy $4 } # trim from $1 (HH:MM
 alias yt=yt-dlp
 alias gdl=gallery-dl
 alias adbpull='adb pull -a -p'                             # keeps original timestamps for files
+
+function split_dir {
+    # groups files by week of modification - TODO: make it work for days/months/years too by passing an argument
+    find -maxdepth 1 -mindepth 1 -type f -printf '%TY-%TW\n' | sort -u | xargs mkdir && \  # to split dir 
+    find -maxdepth 1 -mindepth 1 -type f -printf '%f\0%TY-%TW/%f\0' | xargs -0 -l2 mv --
+}
