@@ -1,153 +1,84 @@
 {
+    // Look
+    "window.titleBarStyle": "custom",
+    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.iconTheme": "material-icon-theme",
+
+    // General
+    "files.autoSave": "afterDelay",
+
+    // Editor
+    "diffEditor.ignoreTrimWhitespace": false,
     "editor.bracketPairColorization.enabled": true,
+    "editor.fontFamily": "Jetbrains Mono", // "'JetBrainsMono Nerd Font'",
     "editor.fontLigatures": true,
-    "editor.fontFamily": "Jetbrains Mono",
+    "editor.guides.bracketPairs": "active",
+    "editor.guides.indentation": true,
+    "editor.letterSpacing": 0.4,
     "editor.mouseWheelZoom": true,
+    "editor.renderLineHighlight": "all",
     "editor.renderWhitespace": "boundary",
     "editor.suggestSelection": "first",
-    "editor.renderLineHighlight": "all",
-    "files.autoSave": "afterDelay",
-    "markdown-pdf.displayHeaderFooter": false,
-    "markdown-pdf.emoji": false,
-    "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.cursorStyle": "line",
-    "terminal.integrated.fontFamily": "JetbrainsMono Nerd Font",
-    "terminal.integrated.fontSize": 14,
+
+    // Explorer
+    "explorer.excludeGitIgnore": true,
+
+    // Workbench
+    "workbench.colorCustomizations": {
+        "editor.lineHighlightBackground" : "#60161600",
+        "editor.lineHighlightBorder"     : "#6e0606",
+        "tree.indentGuidesStroke"        : "#2c5eca",
+        "tree.inactiveIndentGuidesStroke": "#5b5d61",
+    },
+
     "workbench.sideBar.location": "right",
     "workbench.tree.indent": 20,
+    "workbench.tree.enableStickyScroll": true,
     "workbench.tree.renderIndentGuides": "always",
-    "workbench.colorCustomizations": {
-        "tree.indentGuidesStroke": "#2c5eca",
-        "editor.lineHighlightBackground": "#60161600",
-        "editor.lineHighlightBorder": "#6e0606"
-    },
+    "workbench.list.smoothScrolling": true,
+
+    // Terminal
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.enableImages": true,
+    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+    "terminal.integrated.middleClickBehavior": "paste",
+    "terminal.integrated.tabs.location": "right",
+    "terminal.integrated.mouseWheelZoom": true,
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.shellIntegration.history": 10000000,
+    "terminal.integrated.scrollback": 10000000,
+
+    // Misc./Other
+    "telemetry.telemetryLevel": "off",
+
+
+    // Generic plugins
     "todohighlight.keywords": [
         {
-            "text": "NOTE:",
-            "color": "#1bb58f",
+            "backgroundColor": "#5c0c0c",
+            "border": "2px solid red",
+            "borderRadius": "4px",
+            "color": "red",
+            "text": "TODO:"
+        },
+        {
             "backgroundColor": "#054a39",
             "border": "2px solid #1bb58f",
             "borderRadius": "4px",
-            "overviewRulerColor": "grey"
+            "color": "#1bb58f",
+            "overviewRulerColor": "grey",
+            "text": "NOTE:"
         },
         {
-            "text": "TOCHANGE:",
-            "color": "#1b7db5",
             "backgroundColor": "#091a6e",
             "border": "2px solid #1b7db5",
             "borderRadius": "4px",
-            "overviewRulerColor": "grey"
+            "color": "#1b7db5",
+            "overviewRulerColor": "grey",
+            "text": "TOCHANGE:"
         },
-        {
-            "text": "TODO:",
-            "color": "red",
-            "border": "2px solid red",
-            "borderRadius": "4px",
-            "backgroundColor": "#5c0c0c",
-        }
     ],
-    "latex-workshop.message.badbox.show": false,
-    "latex-workshop.view.pdf.viewer": "browser",
-    "latex-workshop.latex.tools": [
-        {
-            "name": "latexmk",
-            "command": "latexmk",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "--shell-escape",
-                "-pdf",
-                "-outdir=%OUTDIR%",
-                "%DOC%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "lualatexmk",
-            "command": "latexmk",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "-lualatex",
-                "-outdir=%OUTDIR%",
-                "%DOC%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "latexmk_rconly",
-            "command": "latexmk",
-            "args": [
-                "%DOC%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "pdflatex",
-            "command": "pdflatex",
-            "args": [
-                "-synctex=1",
-                "-interaction=nonstopmode",
-                "-file-line-error",
-                "%DOC%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "bibtex",
-            "command": "bibtex",
-            "args": [
-                "%DOCFILE%"
-            ],
-            "env": {}
-        },
-        {
-            "name": "rnw2tex",
-            "command": "Rscript",
-            "args": [
-                "-e",
-                "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
-            ],
-            "env": {}
-        },
-        {
-            "name": "jnw2tex",
-            "command": "julia",
-            "args": [
-                "-e",
-                "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
-            ],
-            "env": {}
-        },
-        {
-            "name": "jnw2texmintex",
-            "command": "julia",
-            "args": [
-                "-e",
-                "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
-            ],
-            "env": {}
-        },
-        {
-            "name": "tectonic",
-            "command": "tectonic",
-            "args": [
-                "--synctex",
-                "--keep-logs",
-                "%DOC%.tex"
-            ],
-            "env": {}
-        }
-    ],
-    "telemetry.telemetryLevel": "off",
-    "workbench.colorTheme": "GitHub Dark Default",
-    "workbench.iconTheme": "material-icon-theme",
-    "indentRainbow.colorOnWhiteSpaceOnly": true,
-    "indentRainbow.errorColor": "rgba(128,32,32,0.1)",
-    "diffEditor.ignoreTrimWhitespace": false,
-    "latex-workshop.latex.autoBuild.run": "onSave",
-    "ltex.language": "pl-PL",
-    "explorer.excludeGitIgnore": true
+    
 }
