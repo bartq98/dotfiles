@@ -1,6 +1,6 @@
 # ------------------------------------------------------ GENERAL ------------------------------------------------------
 alias cl='clear'
-alias hr="printf '#%.0s' {1..$(tput cols)}"
+function hr { printf '#%.0s' {1..$(tput cols)} }
 
 # ls (eza):
 alias l='eza -l --group-directories-first --grid --git'
